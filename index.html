@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Cat – Calculadora de Diluição</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="logo-container">
+          <img src="https://i.imgur.com/kUIfoP3.png" alt="Black Cat Logo" class="logo" />
+          <div class="brand-text">
+          <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="calculator-card">
+        <h2 class="card-title">Calculadora de Diluição</h2>
+        <p class="card-subtitle">Calcule a diluição perfeita para seus produtos automotivos</p>
+
+        <form id="dilutionForm" class="calculator-form">
+          <div class="form-group">
+            <label for="dilutionRatio">Proporção de Diluição</label>
+            <select id="dilutionRatio" name="dilutionRatio" required>
+              <option value="">Selecione a proporção</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="totalVolume">Volume Total do Recipiente (ml)</label>
+            <input
+              type="number"
+              id="totalVolume"
+              name="totalVolume"
+              placeholder="Ex: 500, 1000, 2000..."
+              min="1"
+              step="1"
+              required
+            />
+          </div>
+
+          <button type="submit" class="calculate-btn">
+            Calcular Diluição
+          </button>
+        </form>
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <div id="resultArea" class="result-area hidden">
+          <h3 class="result-title">Resultado da Diluição</h3>
+          <div class="result-content">
+            <div class="result-item product">
+              <span class="result-label">Produto Concentrado:</span>
+              <span id="productAmount" class="result-value">0.00 ml</span>
+            </div>
+            <div class="result-item water">
+              <span class="result-label">Água:</span>
+              <span id="waterAmount" class="result-value">0.00 ml</span>
+            </div>
+          </div>
+          <div class="result-ratio">
+            <span id="selectedRatio"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-text">
+        <div class="instagram-link">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Instagram-Gradient-Logo-PNG.png" 
+       alt="Instagram Logo" 
+       class="insta-icon">
+
+   
+  <a href="https://instagram.com/blackcat.carcare07" 
+     target="_blank" 
+     class="footer-highlight">
+     @blackcat.carcare07
+  </a>
+</div>
+
+        
+        <div class="whatsapp-link">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/WhatsApp_Logo_green.svg/960px-WhatsApp_Logo_green.svg.png" 
+       alt="WhatsApp Logo" 
+       class="whatsapp-icon">
+
+  WhatsApp: 
+  <a href="https://wa.me/5511978771548" 
+     target="_blank" 
+     class="footer-highlight">
+     (11) 97877-1548
+  </a>
+</div>
+
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
